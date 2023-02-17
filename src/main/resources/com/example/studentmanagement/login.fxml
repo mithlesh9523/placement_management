@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="685.0" prefWidth="769.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentmanagement.login">
+   <center>
+      <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <VBox maxHeight="647.0" prefHeight="647.0" prefWidth="690.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="143.0" prefWidth="498.0">
+                     <children>
+                        <ImageView fitHeight="86.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icon/students.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" prefHeight="32.0" prefWidth="98.0" text=" LOGIN" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Cambria Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Separator prefWidth="200.0" style="-fx-background-color: black;" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox prefHeight="80.0" prefWidth="458.0">
+                     <children>
+                        <Label text="USER NAME :">
+                           <font>
+                              <Font name="Arial Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="usernametf" prefHeight="40.0" promptText="User Name :" style="-fx-border-color: grey; -fx-border-radius: 3; -fx-background-radius: 3;">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin></TextField>
+
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="60.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="91.0" prefWidth="458.0">
+                     <children>
+                        <Label text="PASSWORD :">
+                           <font>
+                              <Font name="Arial Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="passwordpf" prefHeight="40.0" promptText=" Password : " style="-fx-border-color: grey; -fx-border-radius: 3;">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </PasswordField>
+                        <Label text="Forgot Password?" textFill="#c90c0c" underline="true">
+                           <VBox.margin>
+                              <Insets left="500.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="40.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="76.0" prefWidth="498.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#loginbt" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: blue; -fx-background-radius: 3;" text="LOGIN" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="120.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="38.0" prefWidth="498.0">
+                     <children>
+                        <Label text="Already have an account? Login Here">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+   </center>
+</BorderPane>
