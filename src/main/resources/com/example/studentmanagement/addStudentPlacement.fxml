@@ -11,13 +11,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="600.0" prefHeight="535.0" prefWidth="879.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentmanagement.Placement">
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentmanagement.AddStudentPlacement">
    <center>
-      <HBox alignment="CENTER" minWidth="700.0" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" BorderPane.alignment="CENTER">
          <children>
             <VBox maxHeight="500.0" prefHeight="509.0" prefWidth="879.0" style="-fx-border-color: grey; -fx-border-radius: 10;">
                <children>
-                  <VBox alignment="CENTER" prefHeight="98.0" prefWidth="747.0">
+                  <VBox alignment="CENTER" prefHeight="98.0">
                      <children>
                         <Label text="PLACEMENT">
                            <font>
@@ -33,24 +33,8 @@
                   </VBox>
                   <VBox>
                      <children>
-                        <HBox prefHeight="98.0" prefWidth="746.0">
+                        <HBox prefHeight="98.0" prefWidth="746.0" spacing="10.0">
                            <children>
-                              <VBox prefHeight="100.0" prefWidth="270.0">
-                                 <children>
-                                    <Label text="STUDEN ID :">
-                                       <font>
-                                          <Font name="Arial Bold" size="15.0" />
-                                       </font>
-                                    </Label>
-                                    <TextField fx:id="studentidtf" prefHeight="40.0" promptText="Enter student id" style="-fx-border-color: grey; -fx-border-radius: 6; -fx-background-radius: 6;">
-                                       <VBox.margin>
-                                          <Insets top="5.0" />
-                                       </VBox.margin></TextField>
-                                 </children>
-                                 <HBox.margin>
-                                    <Insets left="10.0" right="10.0" />
-                                 </HBox.margin>
-                              </VBox>
                               <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="270.0">
                                  <children>
                                     <Label text="STUDENT NAME :">
@@ -80,11 +64,7 @@
                                     <Insets left="10.0" right="10.0" />
                                  </HBox.margin>
                               </VBox>
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="98.0" prefWidth="746.0">
-                           <children>
-                              <VBox prefHeight="98.0" prefWidth="270.0">
+                              <VBox prefHeight="100.0" prefWidth="270.0">
                                  <children>
                                     <Label text="PHONE :">
                                        <font>
@@ -97,9 +77,13 @@
                                        </VBox.margin></TextField>
                                  </children>
                                  <HBox.margin>
-                                    <Insets left="10.0" right="10.0" />
+                                    <Insets />
                                  </HBox.margin>
                               </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="98.0" prefWidth="746.0" spacing="10.0">
+                           <children>
                               <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="270.0">
                                  <children>
                                     <Label text="SESSION :">
@@ -120,20 +104,34 @@
                                           <Font name="Arial Bold" size="15.0" />
                                        </font>
                                     </Label>
-                                    <TextField fx:id="coursetf" prefHeight="40.0" promptText="Enter Course :" style="-fx-border-color: grey; -fx-border-radius: 6; -fx-background-radius: 6;">
+                                    <ComboBox fx:id="cbCourse" prefHeight="40.0" prefWidth="392.0" style="-fx-border-color: grey; -fx-border-radius: 5; -fx-background-radius: 5;">
                                        <VBox.margin>
                                           <Insets top="5.0" />
-                                       </VBox.margin></TextField>
+                                       </VBox.margin>
+                                    </ComboBox>
                                  </children>
                                  <HBox.margin>
                                     <Insets left="10.0" right="10.0" />
                                  </HBox.margin>
                               </VBox>
+                              <VBox prefHeight="100.0" prefWidth="270.0" spacing="5.0">
+                                 <children>
+                                    <Label text="GENDER :">
+                                       <font>
+                                          <Font name="Arial Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="gendercb" prefHeight="40.0" prefWidth="270.0" style="-fx-border-color: grey; -fx-border-radius: 5; -fx-background-radius: 5;" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </VBox>
                            </children>
                         </HBox>
-                        <HBox prefHeight="98.0" prefWidth="746.0">
+                        <HBox alignment="TOP_CENTER" prefHeight="98.0" prefWidth="746.0" spacing="80.0">
                            <children>
-                              <VBox prefHeight="100.0" prefWidth="270.0">
+                              <VBox prefHeight="100.0" prefWidth="382.0">
                                  <children>
                                     <Label text="COMPANY NAME :">
                                        <font>
@@ -146,10 +144,10 @@
                                        </VBox.margin></TextField>
                                  </children>
                                  <HBox.margin>
-                                    <Insets left="10.0" right="10.0" />
+                                    <Insets />
                                  </HBox.margin>
                               </VBox>
-                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="270.0">
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="382.0">
                                  <children>
                                     <Label text="JOB CITY :">
                                        <font>
@@ -162,24 +160,11 @@
                                        </VBox.margin></TextField>
                                  </children>
                               </VBox>
-                              <VBox layoutX="258.0" layoutY="10.0" prefHeight="100.0" prefWidth="270.0" spacing="5.0">
-                                 <children>
-                                    <Label text="GENDER :">
-                                       <font>
-                                          <Font name="Arial Bold" size="15.0" />
-                                       </font>
-                                    </Label>
-                                    <ComboBox fx:id="gendercb" prefHeight="40.0" prefWidth="259.0" />
-                                 </children>
-                                 <HBox.margin>
-                                    <Insets left="10.0" right="10.0" />
-                                 </HBox.margin>
-                              </VBox>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" prefHeight="69.0" prefWidth="818.0">
+                        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="818.0" spacing="60.0">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#resetbt" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: red; -fx-background-radius: 6;" text="RESET" textFill="WHITE">
+                              <Button mnemonicParsing="false" onAction="#resetbt" prefHeight="36.0" prefWidth="190.0" style="-fx-background-color: red; -fx-background-radius: 6;" text="RESET" textFill="WHITE">
                                  <font>
                                     <Font name="Arial Bold" size="16.0" />
                                  </font>
@@ -187,7 +172,7 @@
                                     <Insets left="40.0" right="40.0" />
                                  </HBox.margin>
                               </Button>
-                              <Button layoutX="298.0" layoutY="43.0" mnemonicParsing="false" onAction="#submitbt" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: blue; -fx-background-radius: 6;" text="SUBMIT" textFill="WHITE">
+                              <Button layoutX="298.0" layoutY="43.0" mnemonicParsing="false" onAction="#submitbt" prefHeight="36.0" prefWidth="190.0" style="-fx-background-color: blue; -fx-background-radius: 6;" text="SUBMIT" textFill="WHITE">
                                  <font>
                                     <Font name="Arial Bold" size="16.0" />
                                  </font>
@@ -199,7 +184,7 @@
                         </HBox>
                      </children>
                      <padding>
-                        <Insets left="10.0" right="10.0" />
+                        <Insets left="15.0" right="15.0" />
                      </padding>
                   </VBox>
                </children>

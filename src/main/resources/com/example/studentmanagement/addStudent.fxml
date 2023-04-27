@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="630.0" prefWidth="872.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentmanagement.Students">
+<BorderPane prefHeight="630.0" prefWidth="872.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentmanagement.AddStudents">
    <center>
       <HBox alignment="CENTER" maxHeight="600.0" BorderPane.alignment="CENTER">
          <children>
@@ -36,29 +36,9 @@
                      <children>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <VBox prefHeight="100.0" prefWidth="270.0">
-                                 <children>
-                                    <Label text="STUDENT ID :">
-                                       <font>
-                                          <Font name="Arial Bold" size="16.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets />
-                                       </VBox.margin>
-                                    </Label>
-                                    <TextField fx:id="studentidtf" prefHeight="40.0" promptText="Enter Id :" style="-fx-border-color: grey; -fx-border-radius: 6; -fx-background-radius: 6;">
-                                       <VBox.margin>
-                                          <Insets top="5.0" />
-                                       </VBox.margin>
-                                    </TextField>
-                                 </children>
-                                 <HBox.margin>
-                                    <Insets right="10.0" />
-                                 </HBox.margin>
-                              </VBox>
                               <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="270.0">
                                  <children>
-                                    <Label text="NAME :">
+                                    <Label text="STUDENT NAME :">
                                        <font>
                                           <Font name="Arial Bold" size="16.0" />
                                        </font>
@@ -66,7 +46,7 @@
                                           <Insets />
                                        </VBox.margin>
                                     </Label>
-                                    <TextField fx:id="nametf" prefHeight="40.0" promptText="Enter Name :" style="-fx-border-color: grey; -fx-border-radius: 6; -fx-background-radius: 6;">
+                                    <TextField fx:id="studentnametf" prefHeight="40.0" promptText="Enter student name :" style="-fx-border-color: grey; -fx-border-radius: 6; -fx-background-radius: 6;">
                                        <VBox.margin>
                                           <Insets top="5.0" />
                                        </VBox.margin>
@@ -93,10 +73,6 @@
                                     <Insets left="10.0" />
                                  </HBox.margin>
                               </VBox>
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
-                           <children>
                               <VBox prefHeight="100.0" prefWidth="270.0">
                                  <children>
                                     <Label text="PHONE :">
@@ -114,9 +90,13 @@
                                     </TextField>
                                  </children>
                                  <HBox.margin>
-                                    <Insets right="10.0" />
+                                    <Insets left="10.0" />
                                  </HBox.margin>
                               </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
                               <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="270.0">
                                  <children>
                                     <Label text="SESSION :">
@@ -133,45 +113,11 @@
                                        </VBox.margin>
                                     </TextField>
                                  </children>
-                              </VBox>
-                              <VBox layoutX="253.0" layoutY="10.0" prefHeight="100.0" prefWidth="270.0">
-                                 <children>
-                                    <Label text="COURSE :">
-                                       <font>
-                                          <Font name="Arial Bold" size="16.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets />
-                                       </VBox.margin>
-                                    </Label>
-                                    <ComboBox fx:id="coursecb" prefHeight="40.0" prefWidth="270.0" style="-fx-border-color: grey; -fx-border-radius: 6; -fx-background-radius: 6;">
-                                       <VBox.margin>
-                                          <Insets top="5.0" />
-                                       </VBox.margin>
-                                    </ComboBox>
-                                 </children>
                                  <HBox.margin>
-                                    <Insets left="10.0" />
+                                    <Insets right="10.0" />
                                  </HBox.margin>
                               </VBox>
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <VBox prefHeight="100.0" prefWidth="270.0" spacing="5.0">
-                                 <children>
-                                    <Label text="GENDER :">
-                                       <font>
-                                          <Font name="Arial Bold" size="16.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets />
-                                       </VBox.margin>
-                                    </Label>
-                                    <ComboBox fx:id="gendercb" prefHeight="40.0" prefWidth="262.0" />
-                                 </children>
-                              </VBox>
-                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="270.0">
+                              <VBox prefHeight="100.0" prefWidth="270.0">
                                  <children>
                                     <Label text="DATE OF BRITH :">
                                        <font>
@@ -181,14 +127,14 @@
                                           <Insets />
                                        </VBox.margin>
                                     </Label>
-                                    <DatePicker fx:id="dateofbirthdp" prefHeight="40.0" prefWidth="270.0" style="-fx-border-color: grey; -fx-border-radius: 6; -fx-background-radius: 6;">
+                                    <DatePicker fx:id="dateofbirthdp" prefHeight="40.0" prefWidth="270.0" promptText="01/01/1999" style="-fx-border-color: grey; -fx-border-radius: 6; -fx-background-radius: 6;">
                                        <VBox.margin>
                                           <Insets top="5.0" />
                                        </VBox.margin>
                                     </DatePicker>
                                  </children>
                               </VBox>
-                              <VBox layoutX="253.0" layoutY="10.0" prefHeight="100.0" prefWidth="270.0">
+                              <VBox prefHeight="100.0" prefWidth="270.0">
                                  <children>
                                     <Label text="FATHER NAME :">
                                        <font>
@@ -212,7 +158,40 @@
                         </HBox>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <VBox prefHeight="100.0" prefWidth="270.0">
+                              <VBox prefHeight="100.0" prefWidth="148.0" spacing="5.0">
+                                 <children>
+                                    <Label text="GENDER :">
+                                       <font>
+                                          <Font name="Arial Bold" size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="gendercb" prefHeight="40.0" prefWidth="262.0" promptText="Gender" style="-fx-border-color: grey; -fx-border-radius: 5; -fx-background-radius: 5;" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="268.0">
+                                 <children>
+                                    <Label text="COURSE :">
+                                       <font>
+                                          <Font name="Arial Bold" size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="courseCb" prefHeight="40.0" prefWidth="270.0" promptText="Course" style="-fx-border-color: grey; -fx-border-radius: 6; -fx-background-radius: 6;">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </ComboBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="386.0">
                                  <children>
                                     <Label text="VILLAGE :">
                                        <font>
@@ -229,10 +208,14 @@
                                     </TextField>
                                  </children>
                                  <HBox.margin>
-                                    <Insets right="10.0" />
+                                    <Insets left="10.0" />
                                  </HBox.margin>
                               </VBox>
-                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="270.0">
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="155.0">
+                           <children>
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="329.0">
                                  <children>
                                     <Label text="DISTRICT :">
                                        <font>
@@ -249,7 +232,7 @@
                                     </TextField>
                                  </children>
                               </VBox>
-                              <VBox layoutX="253.0" layoutY="10.0" prefHeight="100.0" prefWidth="270.0">
+                              <VBox layoutX="253.0" layoutY="10.0" prefHeight="100.0" prefWidth="329.0">
                                  <children>
                                     <Label text="STATE :">
                                        <font>
@@ -266,14 +249,14 @@
                                     </TextField>
                                  </children>
                                  <HBox.margin>
-                                    <Insets left="10.0" />
+                                    <Insets />
                                  </HBox.margin>
                               </VBox>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="815.0">
+                        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="815.0" spacing="10.0">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#resetbt" prefHeight="35.0" prefWidth="160.0" style="-fx-background-color: RED; -fx-background-radius: 6;" text="RESET" textFill="WHITE">
+                              <Button mnemonicParsing="false" onAction="#resetbt" prefHeight="36.0" prefWidth="190.0" style="-fx-background-color: RED; -fx-background-radius: 6;" text="RESET" textFill="WHITE">
                                  <font>
                                     <Font name="Arial Bold" size="16.0" />
                                  </font>
@@ -281,7 +264,7 @@
                                     <Insets left="70.0" right="70.0" />
                                  </HBox.margin>
                               </Button>
-                              <Button layoutX="338.0" layoutY="40.0" mnemonicParsing="false" onAction="#submitbt" prefHeight="35.0" prefWidth="160.0" style="-fx-background-color: blue; -fx-background-radius: 6;" text="SUBMIT" textFill="WHITE">
+                              <Button layoutX="338.0" layoutY="40.0" mnemonicParsing="false" onAction="#submitbt" prefHeight="36.0" prefWidth="190.0" style="-fx-background-color: blue; -fx-background-radius: 6;" text="SUBMIT" textFill="WHITE">
                                  <font>
                                     <Font name="Arial Bold" size="16.0" />
                                  </font>

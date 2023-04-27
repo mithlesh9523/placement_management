@@ -36,7 +36,7 @@ public class Dashboard implements Initializable {
 
 
     public void placementbt(ActionEvent actionEvent) {
-        replaceScene("Placement.fxml");
+        replaceScene("placementTable.fxml");
     }
 
     public void applieddrives(ActionEvent actionEvent) {
@@ -53,7 +53,11 @@ public class Dashboard implements Initializable {
     }
 
     public void Student(ActionEvent actionEvent) {
-        replaceScene("Students.fxml");
+        replaceScene("studentTable.fxml");
+    }
+    public void addplacemantstudentbt(ActionEvent actionEvent) {
+        replaceScene("placementTable.fxml");
+
     }
 }
 
